@@ -3,16 +3,16 @@ include Makefile.common
 all: compile
 
 compile:
-	docker-compose -f docker-compose.prod.yml -p cphalcon_bootstrap build --pull --force-rm
+	docker-compose -f docker-compose.prod.yml -p cphalcon_scaffold build --pull --force-rm
 
 composer:
 	composer install --no-dev --no-interaction --optimize-autoloader
 
 restart:
-	docker-compose -f docker-compose.prod.yml -p cphalcon_bootstrap restart -t 1
+	docker-compose -f docker-compose.prod.yml -p cphalcon_scaffold restart -t 1
 
 up:
-	docker-compose -f docker-compose.prod.yml -p cphalcon_bootstrap up -d --force-recreate
+	docker-compose -f docker-compose.prod.yml -p cphalcon_scaffold up -d --force-recreate
 
 down:
-	docker-compose -f docker-compose.prod.yml -p cphalcon_bootstrap down
+	docker-compose -f docker-compose.prod.yml -p cphalcon_scaffold down

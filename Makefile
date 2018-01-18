@@ -3,25 +3,25 @@ include Makefile.common
 all: compile
 
 compile:
-	docker-compose -f docker-compose.dev.yml -p cphalcon_bootstrap build --pull --force-rm
+	docker-compose -f docker-compose.dev.yml -p cphalcon_scaffold build --pull --force-rm
 
 composer:
-	docker-compose -f docker-compose.dev.yml -p cphalcon_bootstrap exec -T app composer install --no-interaction
+	docker-compose -f docker-compose.dev.yml -p cphalcon_scaffold exec -T app composer install --no-interaction
 
 composer-update:
-	docker-compose -f docker-compose.dev.yml -p cphalcon_bootstrap exec -T app composer update
+	docker-compose -f docker-compose.dev.yml -p cphalcon_scaffold exec -T app composer update
 
 restart:
-	docker-compose -f docker-compose.dev.yml -p cphalcon_bootstrap restart -t 1
+	docker-compose -f docker-compose.dev.yml -p cphalcon_scaffold restart -t 1
 
 up:
-	docker-compose -f docker-compose.dev.yml -p cphalcon_bootstrap up -d --force-recreate
+	docker-compose -f docker-compose.dev.yml -p cphalcon_scaffold up -d --force-recreate
 
 down:
-	docker-compose -f docker-compose.dev.yml -p cphalcon_bootstrap down
+	docker-compose -f docker-compose.dev.yml -p cphalcon_scaffold down
 
 seed:
-	docker-compose -f docker-compose.dev.yml -p cphalcon_bootstrap exec -T app ./bin/phinx seed:run
+	docker-compose -f docker-compose.dev.yml -p cphalcon_scaffold exec -T app ./bin/phinx seed:run
 
 migrate:
-	docker-compose -f docker-compose.dev.yml -p cphalcon_bootstrap exec -T app ./bin/phinx migrate
+	docker-compose -f docker-compose.dev.yml -p cphalcon_scaffold exec -T app ./bin/phinx migrate

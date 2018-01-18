@@ -1,5 +1,5 @@
 {
-  "name": "nmapx/cphalcon-bootstrap",
+  "name": "nmapx/php-cphalcon-scaffold",
   "type": "project",
   "require-dev": {
     "phalcon/ide-stubs": "v3.3.0",
