@@ -24,12 +24,12 @@ It provides multi-module configuration, all the features which are part of the f
 Just clone the repository and customize the application to yourself.
 
 You can register new modules and DI services (global) in [./app/Kernel.php](./app/Kernel.php).
-It's also possible to register DI services inside the given module. Just follow the example in [./src/App](./src/App).
+It's also possible to register DI services inside the given module. Just follow the example in [./src/App/App.php](./src/App/App.php).
 
 You can add new parameters in `.env` and `.env.dist` files, then register them in [./app/config/parameters.php](./app/config/parameters.php).
 
 You might want to use my Docker setup as well.
-You will find all the important commands in Makefile (development) and Makefile.prod files.
+You will find all the important commands in [./Makefile](./Makefile) (development) and [./Makefile.prod](./Makefile.prod) files.
 
 In other case you have to setup the environment by yourself. You can find the requirements above.
 
@@ -39,7 +39,7 @@ In other case you have to setup the environment by yourself. You can find the re
 2. Create `.env` file based on `.env.dist` and fill the parameters
 3. Execute `make compile` and let Docker build the images for you
 4. Execute `make up` to run the containers
-> Note: you may need to run `make composer` to fetch vendors in dev environment
+> Note: you may need to run `make composer` to fetch vendors in dev environment especially if your're doing it for the first time
 5. Application should be accessible [here](http://127.0.0.1:9460)
 
 ## License

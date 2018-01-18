@@ -19,9 +19,3 @@ up:
 
 down:
 	docker-compose -f docker-compose.dev.yml -p cphalcon_scaffold down
-
-seed:
-	docker-compose -f docker-compose.dev.yml -p cphalcon_scaffold exec -T app ./bin/phinx seed:run
-
-migrate:
-	docker-compose -f docker-compose.dev.yml -p cphalcon_scaffold exec -T app ./bin/phinx migrate
