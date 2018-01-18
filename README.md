@@ -6,6 +6,7 @@ It provides multi-module configuration, all the features which are part of the f
 ## Technologies
 * PHP 7.2 with **composer**
 * C Phalcon PHP framework 3.3.0
+* NGINX 1.13 web server
 
 ## Requirements
 
