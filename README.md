@@ -40,7 +40,7 @@ In other case you have to setup the environment by yourself. You can find the re
 3. Execute `make compile` and let Docker build the images for you
 4. Execute `make up` to run the containers
 > Note: you may need to run `make composer` to fetch vendors in dev environment especially if your're doing it for the first time
-5. Application should be accessible [here](http://127.0.0.1:9460)
+5. Application should be accessible at [http://127.0.0.1:9460](http://127.0.0.1:9460)
 
 ## License
 
