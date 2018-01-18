@@ -1,0 +1,13 @@
+[*]
+charset = utf-8
+end_of_line = lf
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+[*.{php,js,sql,html,htm,volt}]
+indent_style = space
+indent_size = 4
+
+[*.{json,css}]
+indent_style = space
+indent_size = 2

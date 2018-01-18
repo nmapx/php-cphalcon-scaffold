@@ -1,0 +1,18 @@
+version: '3.1'
+services:
+  server:
+    build:
+      context: ./
+      dockerfile: ./build/server/Dockerfile
+    ports:
+      - 9460:9460/tcp
+    links:
+      - app
+  app:
+    command: "php-fpm"
+    env_file: .env
+    build:
+      context: ./
+      dockerfile: ./build/app/Dockerfile
+      args:
+        SYSTEM_UID: ${SYSTEM_UID}

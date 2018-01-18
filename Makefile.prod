@@ -1,0 +1,18 @@
+include Makefile.common
+
+all: compile
+
+compile:
+	docker-compose -f docker-compose.prod.yml -p cphalcon_bootstrap build --pull --force-rm
+
+composer:
+	composer install --no-dev --no-interaction --optimize-autoloader
+
+restart:
+	docker-compose -f docker-compose.prod.yml -p cphalcon_bootstrap restart -t 1
+
+up:
+	docker-compose -f docker-compose.prod.yml -p cphalcon_bootstrap up -d --force-recreate
+
+down:
+	docker-compose -f docker-compose.prod.yml -p cphalcon_bootstrap down

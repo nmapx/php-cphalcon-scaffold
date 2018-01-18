@@ -1,0 +1,14 @@
+.git/
+.idea/
+vendor/
+
+.env
+
+var/cache/*
+!var/cache/.gitkeep
+!var/cache/volt/
+var/cache/volt/*
+!var/cache/volt/.gitkeep
+
+var/log/*
+!var/log/.gitkeep

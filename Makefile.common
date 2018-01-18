@@ -1,0 +1,12 @@
+docker-clean-images:
+	docker rmi $$(docker images | grep "^<none>" | awk "{print $3}") || true
+
+docker-clean-containers:
+	docker rm $$(docker ps -aq -f status=exited) || true
+
+docker-clean-volumes:
+	docker volume ls -qf dangling=true | xargs -r docker volume rm || true
+
+docker-format:
+	docker rm $$(docker ps -a -q) || true
+	docker rmi $$(docker images -q) || true
