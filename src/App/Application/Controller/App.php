@@ -2,7 +2,6 @@
 
 namespace App\Application\Controller;
 
-use Phalcon\Mvc\View;
 use Phalcon\Http\Response;
 use Phalcon\Mvc\User\Component;
 
@@ -15,8 +14,12 @@ class App extends Component
         ]);
     }
 
-    public function notFound(): View
+    public function notFound(): Response
     {
-        return $this->view;
+        $view = clone $this->view;
+        $view->render('App', 'notFound');
+
+        return $this->response->setStatusCode(404)
+            ->setContent($view->getContent());
     }
 }

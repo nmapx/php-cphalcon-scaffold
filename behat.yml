@@ -1,0 +1,13 @@
+default:
+    extensions:
+        Behat\MinkExtension:
+            goutte: ~
+            base_url: ~
+    autoload:
+        - "%paths.base%/test/behat/bootstrap/"
+    suites:
+        app:
+            paths:
+                - "%paths.base%/test/behat/App/"
+            contexts:
+                - Test\Behat\MainContext

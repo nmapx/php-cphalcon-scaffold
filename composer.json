@@ -5,7 +5,10 @@
     "phalcon/ide-stubs": "v3.3.0",
     "phalcon/incubator": "^v3.2",
     "filp/whoops": "^2.1",
-    "whoops/phalcon": "^2.0"
+    "whoops/phalcon": "^2.0",
+    "behat/behat": "^3.4",
+    "behat/mink-extension": "^2.2",
+    "behat/mink-goutte-driver": "^1.2"
   },
   "config": {
     "bin-dir": "bin"
@@ -13,6 +16,11 @@
   "autoload": {
     "psr-4": {
       "": "app/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Test\\Behat\\": "./test/behat/bootstrap/"
     }
   }
 }
