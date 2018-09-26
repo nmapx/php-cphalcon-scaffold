@@ -5,8 +5,8 @@ It provides multi-module configuration, all the features which are part of the f
 
 ## Technologies
 * PHP 7.2 with **composer**
-* C Phalcon PHP framework 3.3.0
-* NGINX 1.13 web server
+* C Phalcon PHP framework 3.4
+* NGINX 1.15 web server
 
 ## Requirements
 
@@ -17,7 +17,7 @@ It provides multi-module configuration, all the features which are part of the f
 ### without Docker
 * Make >= 4.1
 * PHP >= 7.2 with **composer**
-* C Phalcon PHP framework ^3.3
+* C Phalcon PHP framework ^3.4
 * NGINX or Apache web server
 
 ## Installation
@@ -37,7 +37,7 @@ In other case you have to setup the environment by yourself. You can find the re
 
 1. Clone the repository and navigate to the project root
 2. Create `.env` file based on `.env.dist` and fill the parameters
-3. Execute `make compile` and let Docker build the images for you
+3. Execute `make build` and let Docker build the images for you
 4. Execute `make up` to run the containers
 > Note: you may need to run `make composer` to fetch vendors in dev environment especially if your're doing it for the first time
 5. Application should be accessible at [http://127.0.0.1:9460](http://127.0.0.1:9460)

@@ -1,18 +1,23 @@
 include Makefile.common
 
-all: compile
+all: build
 
-compile:
+.PHONY: build
+build:
 	docker-compose -f docker-compose.prod.yml -p cphalcon_scaffold build --pull --force-rm
 
-composer:
+.PHONY: composer
+composer: composer.lock
 	composer install --no-dev --no-interaction --optimize-autoloader
 
+.PHONY: restart
 restart:
 	docker-compose -f docker-compose.prod.yml -p cphalcon_scaffold restart -t 1
 
+.PHONY: up
 up:
 	docker-compose -f docker-compose.prod.yml -p cphalcon_scaffold up -d --force-recreate
 
+.PHONY: down
 down:
 	docker-compose -f docker-compose.prod.yml -p cphalcon_scaffold down
