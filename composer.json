@@ -3,15 +3,16 @@
   "type": "project",
   "require-dev": {
     "phalcon/ide-stubs": "v3.4.1",
-    "phalcon/incubator": "^v3.4.0",
-    "filp/whoops": "^2.1",
+    "phalcon/incubator": "^v3.4.1",
+    "filp/whoops": "^2.3",
     "whoops/phalcon": "^2.0",
-    "behat/behat": "^3.4",
-    "behat/mink-extension": "^2.2",
+    "behat/behat": "^3.5",
+    "behat/mink-extension": "^2.3",
     "behat/mink-goutte-driver": "^1.2"
   },
   "config": {
-    "bin-dir": "bin"
+    "bin-dir": "bin",
+    "sort-packages": true
   },
   "autoload": {
     "psr-4": {
