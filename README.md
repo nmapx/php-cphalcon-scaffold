@@ -1,7 +1,7 @@
 # PHP C Phalcon Scaffold
 
 It is basically a fresh setup of web application based on C Phalcon PHP framework.
-It provides multi-module configuration, all the features which are part of the framework and Docker setup for both: dev and prod environments.
+It provides multi-module configuration, all the features which are part of the framework and Docker setup (based on Alpine) for both: dev and prod environments.
 
 ## Technologies
 * PHP 7.2 with **composer**
