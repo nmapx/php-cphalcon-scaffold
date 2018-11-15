@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 services:
   server:
     build:
@@ -7,9 +7,9 @@ services:
     ports:
       - 9460:9460/tcp
     volumes:
-      - .:/var/www/app
+      - .:/var/www/html
       - ./build/server/nginx/nginx.conf:/etc/nginx/nginx.conf
-      - ./build/server/nginx/app.conf:/etc/nginx/app.conf
+      - ./build/server/nginx/html.conf:/etc/nginx/html.conf
       - ./build/server/nginx/conf.d/:/etc/nginx/conf.d/
     links:
       - app
@@ -22,5 +22,6 @@ services:
       args:
         SYSTEM_UID: ${SYSTEM_UID}
     volumes:
-      - .:/var/www/app
-      - ./build/app/php/7.2/fpm/pool.d/:/etc/php/7.2/fpm/pool.d/
+      - .:/var/www/html
+      - ./build/app/php/php.ini:/usr/local/etc/php/php.ini
+      - ./build/app/php/php-fpm.d/www.conf:/usr/local/etc/php-fpm.d/www.conf
