@@ -110,10 +110,7 @@ class Kernel
             $router->removeExtraSlashes(true);
 
             foreach ($modules as $module => $details) {
-                if (file_exists(__DIR__ . "/../src/{$module}") &&
-                    file_exists(__DIR__ . "/../src/{$module}/Application") &&
-                    file_exists(__DIR__ . "/../src/{$module}/Application/Resource") &&
-                    file_exists(__DIR__ . "/../src/{$module}/Application/Resource/routing.php")) {
+                if (file_exists(__DIR__ . "/../src/{$module}/Application/Resource/routing.php")) {
                     require_once __DIR__ . "/../src/{$module}/Application/Resource/routing.php";
                 }
             }
