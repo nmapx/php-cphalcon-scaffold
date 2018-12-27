@@ -2,8 +2,8 @@
   "name": "nmapx/php-cphalcon-scaffold",
   "type": "project",
   "require-dev": {
-    "phalcon/ide-stubs": "v3.4.1",
-    "phalcon/incubator": "v3.4.1",
+    "phalcon/ide-stubs": "v3.4.2",
+    "phalcon/incubator": "v3.4.2",
     "filp/whoops": "^2.3",
     "whoops/phalcon": "^2.0",
     "behat/behat": "^3.5",

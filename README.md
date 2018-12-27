@@ -4,7 +4,7 @@ It is basically a fresh setup of web application based on C Phalcon PHP framewor
 It provides multi-module configuration, all the features which are part of the framework and Docker setup (based on Alpine) for both: dev and prod environments.
 
 ## Technologies
-* PHP 7.2 with **composer**
+* PHP 7.3 with **composer**
 * C Phalcon PHP framework 3.4
 * NGINX 1.15 web server
 

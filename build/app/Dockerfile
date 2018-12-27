@@ -1,8 +1,8 @@
-FROM php:7.2-fpm-alpine3.8
+FROM php:7.3-fpm-alpine3.8
 
 LABEL maintainer="mt@ngen.pl"
 
-ENV PHALCON_VERSION 3.4.1
+ENV PHALCON_VERSION 3.4.2
 
 ARG SYSTEM_UID
 
